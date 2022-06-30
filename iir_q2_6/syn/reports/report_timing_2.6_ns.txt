@@ -1,0 +1,106 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : iir_filter
+Version: O-2018.06-SP4
+Date   : Wed Nov 17 22:45:16 2021
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: a1[7] (input port clocked by MY_CLK)
+  Endpoint: reg_dout/Q_reg[7]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  iir_filter         5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.50       0.50 f
+  a1[7] (in)                                              0.00       0.50 f
+  mult_50/b[5] (iir_filter_DW_mult_tc_1)                  0.00       0.50 f
+  mult_50/U140/ZN (AND2_X1)                               0.04       0.54 f
+  mult_50/U149/ZN (XNOR2_X1)                              0.05       0.59 f
+  mult_50/U43/S (FA_X1)                                   0.13       0.72 r
+  mult_50/U42/S (FA_X1)                                   0.11       0.84 f
+  mult_50/U166/ZN (INV_X1)                                0.04       0.88 r
+  mult_50/U232/ZN (OAI222_X1)                             0.05       0.93 f
+  mult_50/U230/ZN (XNOR2_X1)                              0.06       0.99 f
+  mult_50/product[6] (iir_filter_DW_mult_tc_1)            0.00       0.99 f
+  add_1_root_add_0_root_add_52_2/B[0] (iir_filter_DW01_add_1)
+                                                          0.00       0.99 f
+  add_1_root_add_0_root_add_52_2/U14/ZN (NAND2_X1)        0.03       1.03 r
+  add_1_root_add_0_root_add_52_2/U1/ZN (NAND3_X1)         0.04       1.06 f
+  add_1_root_add_0_root_add_52_2/U1_1/CO (FA_X1)          0.10       1.17 f
+  add_1_root_add_0_root_add_52_2/U1_2/S (FA_X1)           0.11       1.28 f
+  add_1_root_add_0_root_add_52_2/SUM[2] (iir_filter_DW01_add_1)
+                                                          0.00       1.28 f
+  add_0_root_add_0_root_add_52_2/B[2] (iir_filter_DW01_add_0)
+                                                          0.00       1.28 f
+  add_0_root_add_0_root_add_52_2/U1_2/CO (FA_X1)          0.11       1.39 f
+  add_0_root_add_0_root_add_52_2/U10/ZN (NAND2_X1)        0.03       1.42 r
+  add_0_root_add_0_root_add_52_2/U13/ZN (NAND3_X1)        0.04       1.46 f
+  add_0_root_add_0_root_add_52_2/U1_4/CO (FA_X1)          0.09       1.55 f
+  add_0_root_add_0_root_add_52_2/U1_5/CO (FA_X1)          0.09       1.64 f
+  add_0_root_add_0_root_add_52_2/U1_6/S (FA_X1)           0.15       1.78 r
+  add_0_root_add_0_root_add_52_2/SUM[6] (iir_filter_DW01_add_0)
+                                                          0.00       1.78 r
+  mult_54/a[6] (iir_filter_DW_mult_tc_2)                  0.00       1.78 r
+  mult_54/U317/ZN (NAND2_X1)                              0.04       1.82 f
+  mult_54/U314/ZN (XNOR2_X1)                              0.06       1.87 f
+  mult_54/U270/ZN (XNOR2_X1)                              0.06       1.93 f
+  mult_54/U269/ZN (XNOR2_X1)                              0.06       1.99 f
+  mult_54/U222/ZN (XNOR2_X1)                              0.07       2.06 f
+  mult_54/U174/ZN (NAND2_X1)                              0.04       2.09 r
+  mult_54/U162/ZN (NAND3_X1)                              0.04       2.13 f
+  mult_54/U215/ZN (NAND2_X1)                              0.04       2.17 r
+  mult_54/U204/ZN (NAND3_X1)                              0.04       2.21 f
+  mult_54/U218/ZN (NAND2_X1)                              0.03       2.24 r
+  mult_54/U221/ZN (NAND3_X1)                              0.04       2.27 f
+  mult_54/U6/CO (FA_X1)                                   0.10       2.37 f
+  mult_54/U180/ZN (NAND2_X1)                              0.04       2.41 r
+  mult_54/U182/ZN (NAND3_X1)                              0.04       2.45 f
+  mult_54/U257/ZN (NAND2_X1)                              0.03       2.48 r
+  mult_54/U258/ZN (NAND3_X1)                              0.04       2.52 f
+  mult_54/U260/ZN (NAND2_X1)                              0.03       2.55 r
+  mult_54/U262/ZN (NAND3_X1)                              0.03       2.59 f
+  mult_54/U228/ZN (XNOR2_X1)                              0.06       2.64 f
+  mult_54/U242/ZN (XNOR2_X1)                              0.06       2.70 f
+  mult_54/product[13] (iir_filter_DW_mult_tc_2)           0.00       2.70 f
+  add_0_root_add_0_root_add_57_2/B[7] (iir_filter_DW01_add_2)
+                                                          0.00       2.70 f
+  add_0_root_add_0_root_add_57_2/U20/ZN (XNOR2_X1)        0.06       2.75 f
+  add_0_root_add_0_root_add_57_2/U21/ZN (XNOR2_X1)        0.05       2.81 f
+  add_0_root_add_0_root_add_57_2/SUM[7] (iir_filter_DW01_add_2)
+                                                          0.00       2.81 f
+  reg_dout/D[7] (reg_N8_0)                                0.00       2.81 f
+  reg_dout/U2/ZN (NAND2_X1)                               0.03       2.83 r
+  reg_dout/U4/ZN (NAND2_X1)                               0.02       2.86 f
+  reg_dout/Q_reg[7]/D (DFFR_X2)                           0.01       2.86 f
+  data arrival time                                                  2.86
+
+  clock MY_CLK (rise edge)                                2.60       2.60
+  clock network delay (ideal)                             0.00       2.60
+  clock uncertainty                                      -0.07       2.53
+  reg_dout/Q_reg[7]/CK (DFFR_X2)                          0.00       2.53 r
+  library setup time                                     -0.04       2.49
+  data required time                                                 2.49
+  --------------------------------------------------------------------------
+  data required time                                                 2.49
+  data arrival time                                                 -2.86
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.38
+
+
+1

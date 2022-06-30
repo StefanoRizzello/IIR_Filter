@@ -1,0 +1,16 @@
+% not optimized
+\begin{table}[]
+\centering
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Power}&\textbf{Internal} &\textbf{Switching} &\textbf{Leakage} &\textbf{Total} &\textbf{Percentage}\\
+\midrule
+Sequential&0.037 &0.014 &0.0035 &0.054 &10.98\%\\
+Combinational &0.22 &0.19 &0.031 &0.44 &89.02\%\\
+\midrule
+Total &\SI{0.26} {\milli \watt} &\SI{0.20} {\milli \watt} &\SI{0.035} {\milli \watt} &\SI{0.49} {\milli \watt} &100\%\\
+\bottomrule
+\end{tabular}
+\caption{Cadence Innovus power report for $4T_c_{,min}$}
+\label{tab:innovus_iir7_power}
+\end{table}

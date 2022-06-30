@@ -1,0 +1,65 @@
+Information: Updating design information... (UID-85)
+Warning: There are infeasible paths detected in your design that were ignored during optimization. Please run 'report_timing -attributes' and/or 'create_qor_snapshot/query_qor_snapshot -infeasible_paths' to identify these paths.  (OPT-1721)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : iir_filter
+Version: O-2018.06-SP4
+Date   : Fri Nov 19 22:28:51 2021
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: din[5] (input port clocked by MY_CLK)
+  Endpoint: reg_p1_b/Q_reg[5]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  iir_filter         5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.50       0.50 r
+  din[5] (in)                                             0.00       0.50 r
+  mult_49/a[3] (iir_filter_DW_mult_tc_11)                 0.00       0.50 r
+  mult_49/U222/ZN (INV_X32)                               0.44       0.94 f
+  mult_49/U221/ZN (XNOR2_X1)                              0.06       1.00 f
+  mult_49/U380/ZN (NAND2_X1)                              0.03       1.03 r
+  mult_49/U415/ZN (OAI22_X1)                              0.03       1.06 f
+  mult_49/U107/CO (FA_X1)                                 0.09       1.16 f
+  mult_49/U105/S (FA_X1)                                  0.14       1.29 r
+  mult_49/U409/ZN (NAND2_X1)                              0.04       1.33 f
+  mult_49/U239/ZN (OAI21_X1)                              0.06       1.39 r
+  mult_49/U243/ZN (AOI21_X1)                              0.03       1.42 f
+  mult_49/U421/ZN (OAI21_X1)                              0.05       1.47 r
+  mult_49/U361/ZN (XNOR2_X1)                              0.06       1.53 r
+  mult_49/product[11] (iir_filter_DW_mult_tc_11)          0.00       1.53 r
+  reg_p1_b/D[5] (reg_N8_1)                                0.00       1.53 r
+  reg_p1_b/U14/ZN (NAND2_X1)                              0.03       1.55 f
+  reg_p1_b/U15/ZN (OAI21_X1)                              0.03       1.59 r
+  reg_p1_b/Q_reg[5]/D (DFFR_X1)                           0.01       1.60 r
+  data arrival time                                                  1.60
+
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                      -0.07      -0.07
+  reg_p1_b/Q_reg[5]/CK (DFFR_X1)                          0.00      -0.07 r
+  library setup time                                     -0.04      -0.11
+  data required time                                                -0.11
+  --------------------------------------------------------------------------
+  data required time                                                -0.11
+  data arrival time                                                 -1.60
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -1.70
+
+
+1

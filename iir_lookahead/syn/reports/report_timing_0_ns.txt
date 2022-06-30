@@ -1,0 +1,100 @@
+Information: Updating design information... (UID-85)
+Warning: There are infeasible paths detected in your design that were ignored during optimization. Please run 'report_timing -attributes' and/or 'create_qor_snapshot/query_qor_snapshot -infeasible_paths' to identify these paths.  (OPT-1721)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : iir_filter
+Version: O-2018.06-SP4
+Date   : Wed Nov 17 23:47:21 2021
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: c3[7] (input port clocked by MY_CLK)
+  Endpoint: reg_dout/Q_reg[7]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  iir_filter         5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.50       0.50 f
+  c3[7] (in)                                              0.00       0.50 f
+  mult_46/b[5] (iir_filter_DW_mult_tc_12)                 0.00       0.50 f
+  mult_46/U326/ZN (XNOR2_X1)                              0.06       0.56 f
+  mult_46/U368/ZN (OAI22_X1)                              0.07       0.64 r
+  mult_46/U293/ZN (OR2_X1)                                0.05       0.69 r
+  mult_46/U276/ZN (INV_X1)                                0.03       0.71 f
+  mult_46/U94/S (FA_X1)                                   0.14       0.86 r
+  mult_46/U93/S (FA_X1)                                   0.12       0.98 f
+  mult_46/U357/ZN (NAND2_X1)                              0.04       1.02 r
+  mult_46/U384/ZN (OAI21_X1)                              0.04       1.06 f
+  mult_46/U217/ZN (AOI21_X1)                              0.07       1.12 r
+  mult_46/U396/ZN (OAI21_X1)                              0.04       1.16 f
+  mult_46/U353/ZN (XNOR2_X1)                              0.06       1.22 f
+  mult_46/product[10] (iir_filter_DW_mult_tc_12)          0.00       1.22 f
+  add_2_root_add_0_root_add_48_3/B[4] (iir_filter_DW01_add_12)
+                                                          0.00       1.22 f
+  add_2_root_add_0_root_add_48_3/U72/ZN (NOR2_X1)         0.05       1.27 r
+  add_2_root_add_0_root_add_48_3/U112/ZN (OAI21_X1)       0.03       1.30 f
+  add_2_root_add_0_root_add_48_3/U78/ZN (AOI21_X1)        0.06       1.36 r
+  add_2_root_add_0_root_add_48_3/U67/ZN (XNOR2_X1)        0.04       1.41 f
+  add_2_root_add_0_root_add_48_3/SUM[5] (iir_filter_DW01_add_12)
+                                                          0.00       1.41 f
+  add_0_root_add_0_root_add_48_3/A[5] (iir_filter_DW01_add_10)
+                                                          0.00       1.41 f
+  add_0_root_add_0_root_add_48_3/U79/ZN (NOR2_X1)         0.05       1.46 r
+  add_0_root_add_0_root_add_48_3/U109/ZN (OAI21_X1)       0.03       1.48 f
+  add_0_root_add_0_root_add_48_3/U77/ZN (AOI21_X1)        0.07       1.56 r
+  add_0_root_add_0_root_add_48_3/U82/ZN (XNOR2_X2)        0.08       1.64 r
+  add_0_root_add_0_root_add_48_3/SUM[6] (iir_filter_DW01_add_10)
+                                                          0.00       1.64 r
+  mult_50/a[6] (iir_filter_DW_mult_tc_10)                 0.00       1.64 r
+  mult_50/U422/ZN (XNOR2_X1)                              0.07       1.72 r
+  mult_50/U368/ZN (OAI22_X1)                              0.04       1.75 f
+  mult_50/U89/CO (FA_X1)                                  0.10       1.85 f
+  mult_50/U85/S (FA_X1)                                   0.16       2.01 r
+  mult_50/U258/ZN (NOR2_X1)                               0.03       2.03 f
+  mult_50/U405/ZN (OAI21_X1)                              0.05       2.08 r
+  mult_50/U264/ZN (AOI21_X1)                              0.03       2.12 f
+  mult_50/U417/ZN (OAI21_X1)                              0.05       2.16 r
+  mult_50/U392/ZN (XNOR2_X1)                              0.06       2.22 r
+  mult_50/product[11] (iir_filter_DW_mult_tc_10)          0.00       2.22 r
+  add_0_root_add_0_root_add_54_2/B[5] (iir_filter_DW01_add_9)
+                                                          0.00       2.22 r
+  add_0_root_add_0_root_add_54_2/U105/ZN (NOR2_X1)        0.03       2.25 f
+  add_0_root_add_0_root_add_54_2/U87/ZN (OR2_X1)          0.06       2.31 f
+  add_0_root_add_0_root_add_54_2/U117/ZN (OAI21_X1)       0.05       2.36 r
+  add_0_root_add_0_root_add_54_2/U103/ZN (XNOR2_X1)       0.06       2.42 r
+  add_0_root_add_0_root_add_54_2/SUM[7] (iir_filter_DW01_add_9)
+                                                          0.00       2.42 r
+  reg_dout/D[7] (reg_N8_0)                                0.00       2.42 r
+  reg_dout/U16/ZN (NAND2_X1)                              0.03       2.45 f
+  reg_dout/U5/ZN (NAND2_X1)                               0.03       2.47 r
+  reg_dout/Q_reg[7]/D (DFFR_X2)                           0.01       2.48 r
+  data arrival time                                                  2.48
+
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                      -0.07      -0.07
+  reg_dout/Q_reg[7]/CK (DFFR_X2)                          0.00      -0.07 r
+  library setup time                                     -0.03      -0.10
+  data required time                                                -0.10
+  --------------------------------------------------------------------------
+  data required time                                                -0.10
+  data arrival time                                                 -2.48
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -2.58
+
+
+1

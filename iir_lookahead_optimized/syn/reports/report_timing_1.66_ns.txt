@@ -1,0 +1,74 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : iir_filter
+Version: O-2018.06-SP4
+Date   : Thu Nov 18 01:05:14 2021
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: b0[6] (input port clocked by MY_CLK)
+  Endpoint: reg_11/Q_reg[7]
+            (rising edge-triggered flip-flop clocked by MY_CLK)
+  Path Group: MY_CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  iir_filter         5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock MY_CLK (rise edge)                                0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.50       0.50 f
+  b0[6] (in)                                              0.00       0.50 f
+  mult_55/b[4] (iir_filter_DW_mult_tc_1)                  0.00       0.50 f
+  mult_55/U277/ZN (XNOR2_X1)                              0.05       0.55 f
+  mult_55/U274/ZN (OAI22_X1)                              0.06       0.62 r
+  mult_55/U32/S (FA_X1)                                   0.13       0.75 f
+  mult_55/U210/ZN (NAND2_X1)                              0.04       0.78 r
+  mult_55/U215/ZN (AND3_X1)                               0.05       0.84 r
+  mult_55/U267/ZN (OAI222_X1)                             0.05       0.88 f
+  mult_55/U9/CO (FA_X1)                                   0.10       0.98 f
+  mult_55/U194/ZN (NAND2_X1)                              0.04       1.02 r
+  mult_55/U190/ZN (NAND3_X1)                              0.04       1.06 f
+  mult_55/U172/ZN (NAND2_X1)                              0.04       1.10 r
+  mult_55/U199/ZN (NAND3_X1)                              0.04       1.14 f
+  mult_55/U235/ZN (NAND2_X1)                              0.04       1.17 r
+  mult_55/U208/ZN (NAND3_X1)                              0.04       1.21 f
+  mult_55/U242/ZN (NAND2_X1)                              0.03       1.24 r
+  mult_55/U239/ZN (NAND3_X1)                              0.04       1.28 f
+  mult_55/U251/ZN (NAND2_X1)                              0.04       1.32 r
+  mult_55/U253/ZN (NAND3_X1)                              0.04       1.35 f
+  mult_55/U257/ZN (NAND2_X1)                              0.03       1.38 r
+  mult_55/U259/ZN (NAND3_X1)                              0.03       1.42 f
+  mult_55/U191/ZN (XNOR2_X1)                              0.06       1.47 f
+  mult_55/U265/ZN (XNOR2_X1)                              0.05       1.53 f
+  mult_55/product[13] (iir_filter_DW_mult_tc_1)           0.00       1.53 f
+  reg_11/D[7] (reg_N8_3)                                  0.00       1.53 f
+  reg_11/U20/ZN (NAND2_X1)                                0.03       1.56 r
+  reg_11/U3/ZN (NAND2_X1)                                 0.02       1.58 f
+  reg_11/Q_reg[7]/D (DFFR_X1)                             0.01       1.59 f
+  data arrival time                                                  1.59
+
+  clock MY_CLK (rise edge)                                1.66       1.66
+  clock network delay (ideal)                             0.00       1.66
+  clock uncertainty                                      -0.07       1.59
+  reg_11/Q_reg[7]/CK (DFFR_X1)                            0.00       1.59 r
+  library setup time                                     -0.04       1.55
+  data required time                                                 1.55
+  --------------------------------------------------------------------------
+  data required time                                                 1.55
+  data arrival time                                                 -1.59
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.04
+
+
+1
